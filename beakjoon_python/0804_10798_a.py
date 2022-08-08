@@ -39,14 +39,12 @@
 
 # 한줄에 최대 15개인 2차원 배열 선언
 arr = [[0] * 15 for _ in range(5)]
-print(arr)
 
 # 5줄 반복하여 배열 반복
 for i in range(5):
     line = list(input())
     for j in range(len(line)):
         arr[i][j] = line[j]
-print(arr)
 
 # 출력
 for i in range(15):
