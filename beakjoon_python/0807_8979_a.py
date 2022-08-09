@@ -26,10 +26,9 @@ medals = [[0] for _ in range(N)]
 
 for i in range(N):
     medal = input().replace(" ","")
-    print(medal)
     medals[i] = medal
     nations[i] = medal
 
-medals.sort()
+medals.sort(reverse=True)
 
-nations[K]
+print(medals.index(nations[K-1])+1)
