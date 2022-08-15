@@ -27,7 +27,6 @@ def move(x,y):
                 continue
             if graph[nx][ny]==1:
                 graph[nx][ny] = graph[x][y]+1
-                graph[x][y]= 0
                 print(nx,ny)
                 queue.append((nx,ny))
 
@@ -43,7 +42,7 @@ for i in range(n):
 print(graph)
 
 # 방향벡터
-dx=[-1,1,0,0]
-dy=[0,0,-1,1]
+dx=[1,-1,0,0]
+dy=[0,0,1,-1]
 
 print(move(0,0))
