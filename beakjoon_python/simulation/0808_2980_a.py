@@ -10,12 +10,12 @@
 
 # 첫째 줄에 상근이가 도로의 끝까지 이동하는데 걸리는 시간을 출력한다.
 
-on = 0
-sec = 0
-n, l = map(int, input().split())
+on = 0 # 상근이의 위치
+sec = 0 # 초
+n, l = map(int, input().split()) # n은 신호등 개수 # L 도로 길이
 
 for _ in range(n):
-    d,r,g = map(int, input().split())
+    d,r,g = map(int, input().split()) # D 신호등 위치, R 빨간색 초수, G 초록색 초수
 
     sec += d-on
     on = d
