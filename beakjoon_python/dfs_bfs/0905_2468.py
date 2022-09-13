@@ -1,5 +1,5 @@
 # 0905_2468.py
-# 안전영역: https://www.acmicpc.net/problem/2468 Process
+# 안전영역: https://www.acmicpc.net/problem/2468 풀이 완료!
 
 from collections import deque
 
