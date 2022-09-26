@@ -26,5 +26,5 @@ center = int((n-1)/2)
 print(arr[center])
 #최빈값
 
-
+#범위
 print(max(arr)-min(arr))
