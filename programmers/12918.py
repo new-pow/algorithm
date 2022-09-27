@@ -1,17 +1,14 @@
 # 문자열다루기 기본 https://school.programmers.co.kr/learn/courses/30/lessons/12918
-# 푸는 중
+# 풀이완료
 
-import sys
-input = sys.stdin.readline
+def solution(s):
+    result = True
 
-s = list(input())
-
-s.pop()
-
-result = 'ture'
-
-for i in range(len(s)):
-    if ord(s[i])>=65 and ord(s[i])<=122:
-        result = 'false'
-
-print(result)
+    if len(s)!=4 and len(s)!=6:
+        result = False
+    else:
+        for i in range(len(s)):
+            if ord(s[i])>=65:
+                result = False
+                break
+    return result
