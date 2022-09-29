@@ -19,6 +19,6 @@ for _ in range(doc):
         result += 1
         temp = imp_arr.popleft()
         if temp == best:
-            
+            if temp == 
 
     print(result)
