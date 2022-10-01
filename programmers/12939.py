@@ -3,6 +3,3 @@
 
 s = "1 2 3 4"
 
-s_arr = list(map(int, s.split()))
-
-print('{} {}'.format(min(s_arr),max(s_arr)))
