@@ -1,0 +1,25 @@
+// step1. 문제 분석
+    // 1. 문자열로 입력 받기
+    // 2. 문자 배열로 변환
+    // 3. 배열 순서대로 숫자형으로 변환하여 더하기
+// step2. 손으로 풀기
+// step3. 슈도 코드 작성
+
+// n값 받기
+
+import java.util.Scanner;
+
+public class Main { // P11720_숫자의 합
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int N = sc.nextInt();
+        String Nums = sc.next();
+        // 문자 배열로 변환
+        char[] cNums = Nums.toCharArray();
+        int sum = 0;
+        for (int i=0; i<cNums.length; i++){
+            sum += cNums[i] - '0'; // 정수형으로 변환하면서 sum에 누적
+        }
+        System.out.print(sum);
+    }
+}
