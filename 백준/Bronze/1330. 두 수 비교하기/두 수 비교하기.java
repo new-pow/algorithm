@@ -10,10 +10,8 @@ public class Main{
         int b = Integer.parseInt(st.nextToken());
         String c = "";
         
-        if (a-b > 0) c=">";
-        if (a-b < 0) c="<";
-        if (a-b == 0) c="==";
-        
-        System.out.println(c);
+        if (a-b > 0) System.out.println(">");
+        if (a-b < 0) System.out.println("<");
+        if (a-b == 0) System.out.println("==");
     }
 }
