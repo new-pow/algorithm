@@ -7,19 +7,21 @@
 
 // n값 받기
 
-import java.util.Scanner;
+import java.util.*;
+import java.io.*;
 
 public class Main { // P11720_숫자의 합
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();
-        String Nums = sc.next();
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int N = Integer.parseInt(br.readLine());
+        
         // 문자 배열로 변환
-        char[] cNums = Nums.toCharArray();
         int sum = 0;
-        for (int i=0; i<cNums.length; i++){
-            sum += cNums[i] - '0'; // 정수형으로 변환하면서 sum에 누적
+        
+        for (int i=0; i<N; i++){
+            sum += br.read() - '0'; // 정수형으로 변환하면서 sum에 누적
         }
+        
         System.out.print(sum);
     }
 }
