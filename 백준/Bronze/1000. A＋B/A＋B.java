@@ -1,12 +1,16 @@
 import java.util.*;
+import java.io.*;
 public class Main{
-    public static void main(String args[]){
-        Scanner sc = new Scanner(System.in);
-        int a, b;
-        a = sc.nextInt();
-        b = sc.nextInt();
+    public static void main(String args[]) throws Exception {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        int a = Integer.parseInt(st.nextToken());
+        int b = Integer.parseInt(st.nextToken());
         if (0<a && b<10) {
-            System.out.println(a + b);            
+            bw.write(String.valueOf(a+b));          
         }
+        bw.flush();
+        bw.close();
     }
 }
