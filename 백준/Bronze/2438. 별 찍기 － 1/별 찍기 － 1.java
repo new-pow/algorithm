@@ -4,16 +4,17 @@ import java.io.*;
 public class Main{
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        
         int n = Integer.parseInt(br.readLine());
+        
         for (int i=1; i<n+1; i++) {
-            printStar(i);
+            for (int j=0; j<i; j++) {
+            bw.write("*");
+            }
+            bw.newLine();
         }
-    }
-    
-    static void printStar(int i){
-        for (int j=0; j<i; j++) {
-            System.out.print('*');
-        }
-        System.out.println();
+        bw.flush();
+        bw.close();
     }
 }
