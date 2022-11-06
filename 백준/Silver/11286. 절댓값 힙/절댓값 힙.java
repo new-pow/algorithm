@@ -15,6 +15,7 @@ public class Main {
         });
         
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        StringBuilder sb = new StringBuilder();
 
         int n = Integer.parseInt(br.readLine()); // 연산 개수
 
@@ -23,10 +24,11 @@ public class Main {
             if (x!=0) {
                 pq.add(x);
             } else {
-                if (pq.isEmpty()) System.out.println(0);
-                else System.out.println(pq.poll());
+                if (pq.isEmpty()) sb.append("0").append("\n");
+                else sb.append(pq.poll()).append("\n");
             }
         }
+        System.out.println(sb);
     }
 
 }
