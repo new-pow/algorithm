@@ -2,13 +2,12 @@ import java.util.*;
 
 class Solution {
     public int[] solution(int[] arr, int divisor) {
-        boolean[] checks = new boolean[arr.length];
         int count = 0;
         int[] answer;
         
         for (int i=0; i<arr.length; i++) {
             if (arr[i]%divisor==0) {
-                checks[i] = true; count++;
+                count++;
             }
         }
         
@@ -19,7 +18,7 @@ class Solution {
             answer = new int[count];
             int inputCount = 0;
             for (int i=0; i<arr.length; i++) {
-                if (checks[i]) {
+                if (arr[i]%divisor==0) {
                     answer[inputCount] = arr[i];
                     inputCount ++;
                 }
