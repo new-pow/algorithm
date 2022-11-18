@@ -1,15 +1,12 @@
 class Solution {
     public String solution(int age) {
-        char[] charList = new char[10];
-        for (int i=0; i<charList.length; i++) {
-            charList[i] = (char)('a'+ i);
-        }
+        String answer = "";
         
-        StringBuilder answer = new StringBuilder();
-        while(age>0) {
-            answer.append(String.valueOf(charList[age%10]));
-            age /= 10;
+        String str = age+"";
+        for(int i=0; i<str.length(); i++){
+            answer+=(char)(str.charAt(i)+49);
         }
-        return answer.reverse().toString();
+
+        return answer;
     }
 }
